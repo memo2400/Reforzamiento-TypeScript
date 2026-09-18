@@ -1,5 +1,5 @@
 import './style.css'
-import heroImg from './assets/hero.png'
+import './bases/01-const-let' // con solo importar ya se ejecuta el archivo
 
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
