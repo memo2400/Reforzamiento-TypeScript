@@ -1,5 +1,8 @@
 
 const firstName = 'elon';
-const lastName = "o'musk \"Texto adicional escapado\" ";  //string con apostrofe
+const lastName = "o'musk";  //string con apostrofe en estos casos
+//const lastName = "o'musk \"Texto adicional escapado\" ";  //string con apostrofe en estos casos
 
-console.log(lastName);
+const fullName = ` ${firstName} ${lastName}`;
+
+console.log(fullName);
