@@ -12,12 +12,26 @@ const greet2 = (name: string) => {
     return `hola ${name}`;
 }
 
+// funcion simplificada
+const greet3 = (name: string): string => `hola ${name}`;
+
+
 const message = greet('Vegeta');
 const message2 = greet2('Goku');
 
 console.log(message, message2);
 
-function getUser () {
+// ####################################################
+
+// Interface nos indica comoluce el objeto
+interface User {
+    uid: string;
+    username: string;
+}
+
+
+
+function getUser():User {
     return {
         uid: 'ABC-123',
         username: 'demo22'
@@ -26,13 +40,13 @@ function getUser () {
 
 const user = getUser()
 
-const getUser2 = () => {
-
-    return {
+// aqui seria el retorno resumido
+const getUser2 = () => 
+    ({
       uid: "ABC-123",
       username: "demo44",
-    };
-}
+    });
+
 
 const user2 = getUser2();
 
