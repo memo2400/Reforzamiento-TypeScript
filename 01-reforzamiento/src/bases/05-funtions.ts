@@ -16,3 +16,24 @@ const message = greet('Vegeta');
 const message2 = greet2('Goku');
 
 console.log(message, message2);
+
+function getUser () {
+    return {
+        uid: 'ABC-123',
+        username: 'demo22'
+    }
+}
+
+const user = getUser()
+
+const getUser2 = () => {
+
+    return {
+      uid: "ABC-123",
+      username: "demo44",
+    };
+}
+
+const user2 = getUser2();
+
+console.log(user, user2);
