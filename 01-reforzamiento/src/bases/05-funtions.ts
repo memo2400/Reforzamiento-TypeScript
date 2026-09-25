@@ -51,3 +51,28 @@ const getUser2 = () =>
 const user2 = getUser2();
 
 console.log(user, user2);
+
+
+
+/*
+    Cuano usar una flecga  o funcion normal
+    funcion helerp o metodo de ayuda
+    cuando se requiere legibilidad, como un archivo independiente
+
+    flecha 
+    es prioritario con los colest
+*/
+
+const myNumbers: number[] = [1,2,3,4,5];
+
+myNumbers.forEach( function (index){
+    console.log({index})
+});
+
+// con Flecha funcion es mas simplificado
+myNumbers.forEach((index) => {
+    console.log({index})
+});
+
+// imprimo los 3 argumentos del for
+myNumbers.forEach(console.log);
