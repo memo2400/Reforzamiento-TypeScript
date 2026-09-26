@@ -43,6 +43,13 @@ console.log(context);
 // podemos acceder de esta forma al retorno que contex
 context.user.age;
 
+// como estaba repetida la renombro OPT1
+//const { keyName, rank, user:{name: name2} } = useContex(person);
+
+// forma resumida de hacer lo mismo mas facil de leer OPT2
 const { keyName, rank, user } = useContex(person);
+const {name: name2} = user;
+
 console.log("/ 3 /");
-console.log(keyName, rank, user);
+// aqui hacemos un nuevo objeto {}
+console.log({keyName, rank, name2});
