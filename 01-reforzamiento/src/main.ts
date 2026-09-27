@@ -1,7 +1,7 @@
 import './style.css'
 //import './bases/01-const-let' // con solo importar ya se ejecuta el archivo
 //import './bases/03-object-literal';
-import './bases/06-obj-destructuring';
+import './bases/07-aray-destructuring ';
 
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
