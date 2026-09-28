@@ -16,7 +16,7 @@ console.log(name);
 //Caso Real
 function useState2 (personaje: string){
     
-    return [ personaje, (setPersonaje:string) => console.log(setPersonaje) ] as const;
+    return [ personaje, (setPersonaje:string) => {console.log(setPersonaje)} ] as const;
 }
 
 const [name2, setName2] = useState2("Elon");
