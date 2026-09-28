@@ -13,4 +13,12 @@ const anomima = (texto: string) => {
 const [name, setName] = useState("Elon");
 console.log(name);
 
+//Caso Real
+function useState2 (personaje: string){
+    
+    return [ personaje, (setPersonaje:string) => console.log(setPersonaje) ] as const;
+}
 
+const [name2, setName2] = useState2("Elon");
+console.log(name2);
+setName2("Jenssen");
