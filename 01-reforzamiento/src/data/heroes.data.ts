@@ -1,5 +1,5 @@
 
-interface Hero {
+export interface Hero {
   id: number;
   name: string;
   owner: OwnerEnum; // aqui mero definimos
@@ -14,10 +14,11 @@ enum OwnerEnum {
   // Marvel  // 1
   DC = 'DC',  // aqui si mando el string
   Marvel = 'Marvel',
+  Taravisa = 'Taravisa'
 }
 
 // hay que usar la interface como [] un array pa que jale
-const heroes: Hero[] = [
+export const heroes: Hero[] = [
   {
     id: 1,
     name: "Batman",
@@ -46,8 +47,15 @@ const heroes: Hero[] = [
   {
     id: 6,
     name: "Chapulin",
-    owner: "Taravisa",
+    owner: OwnerEnum.Taravisa,
   },
 ];
 
 
+
+// ###########################################
+// exportacion Default
+// export default heroes;
+
+// se importa asi, se puede cambiar el nombre
+// import myHeroes from "../data/heroes.data"
