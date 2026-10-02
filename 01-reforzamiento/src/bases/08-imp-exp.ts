@@ -20,12 +20,12 @@ const getHeroById = (id: number): Hero | undefined => {
 // console.log(getHeroById(2));
 
 export const getHeroeByOwner = (owner: OwnerEnum) : Hero => {
-    const hero = heroes.find( (hero) => {
+    const hero = heroes.find( (hero: Hero) => { // forma de parametro tipado
         return hero.owner === owner;
     })
 
     if (!hero) {
-
+ 
         const heroEmpty: Hero = {
                 id: 0,
                 name: "Desconocido",
@@ -41,3 +41,13 @@ export const getHeroeByOwner = (owner: OwnerEnum) : Hero => {
 }
 
 console.log(getHeroeByOwner(OwnerEnum.Gato));
+
+export const getHeroeByOwnerList = (owner: OwnerEnum) => {
+    const heroesByOwner = heroes.filter(
+      (hero) => hero.owner === owner,   // forma de parametro corto tipado automatico heroe
+    );
+
+    return heroesByOwner;
+
+
+}
