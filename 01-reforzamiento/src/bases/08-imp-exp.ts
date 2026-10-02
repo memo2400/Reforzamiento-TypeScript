@@ -1,5 +1,5 @@
 
-import {heroes, type Hero} from "../data/heroes.data"
+import {heroes, type Hero, OwnerEnum} from "../data/heroes.data"
 
 const getHeroById = (id: number): Hero | undefined => {
 
@@ -17,4 +17,27 @@ const getHeroById = (id: number): Hero | undefined => {
 
 }
 
-console.log(getHeroById(2));
+// console.log(getHeroById(2));
+
+export const getHeroeByOwner = (owner: OwnerEnum) : Hero => {
+    const hero = heroes.find( (hero) => {
+        return hero.owner === owner;
+    })
+
+    if (!hero) {
+
+        const heroEmpty: Hero = {
+                id: 0,
+                name: "Desconocido",
+                owner: OwnerEnum.Taravisa,
+            }
+        
+
+        return heroEmpty;
+    }
+
+    return hero;
+
+}
+
+console.log(getHeroeByOwner(OwnerEnum.Gato));

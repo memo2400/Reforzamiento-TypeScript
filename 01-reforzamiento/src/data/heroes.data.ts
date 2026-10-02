@@ -9,7 +9,7 @@ export interface Hero {
 type Owner = 'DC' | 'Marvel';
 
 // enum no se traduce a JS, es como Interface
-enum OwnerEnum {
+export enum OwnerEnum {
   // DC,     // 0
   // Marvel  // 1
   DC = 'DC',  // aqui si mando el string
