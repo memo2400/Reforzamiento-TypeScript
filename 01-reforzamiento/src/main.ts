@@ -1,6 +1,6 @@
 import './style.css'
 //import './bases/01-const-let' // con solo importar ya se ejecuta el archivo
-import './bases/09-promises';
+import './bases/10-fetch-api';
 import {getHeroeByOwner, getHeroeByOwnerList} from './bases/08-imp-exp';
 import {OwnerEnum} from './data/heroes.data'
 
