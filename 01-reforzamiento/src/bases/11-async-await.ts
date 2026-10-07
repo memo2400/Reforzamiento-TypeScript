@@ -6,7 +6,7 @@ const API_KEY = "gRgNqw4yeIKx10AFZVloyMry7cSrFVMQ";
 
 const myRequest = fetch (`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`);
 
-const getRandomGifUrl = async () => {
+const getRandomGifUrl = async (): Promise<string> => {
     const response = await fetch(
       `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=g`,
     );
@@ -19,7 +19,6 @@ const getRandomGifUrl = async () => {
 
 }
 
-getRandomGifUrl().then( (url) =>{ CreateImage (url)} )
 
 const CreateImage = (url: string) => {
     const imgElement = document.createElement('img');
@@ -27,3 +26,7 @@ const CreateImage = (url: string) => {
     document.body.append(imgElement);
 
 }
+
+// getRandomGifUrl().then( (url) => CreateImage (url) )
+//!esta forma mas resumida, porque el then devuve el url y se pasa rapido a la funcion sin decirlo explicitamente
+getRandomGifUrl().then(CreateImage);
