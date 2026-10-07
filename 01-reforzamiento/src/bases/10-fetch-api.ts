@@ -1,3 +1,4 @@
+import type { GiphyRandomResponse } from "../data/giphy.response";      // aqui las dos importaciones son tipyes
 
 
 
@@ -19,17 +20,24 @@ const myRequest = fetch (`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY
 
 // al user retornos rapidos, podemos encadenar respuestas then
 myRequest.then( (response) => response.json()
-).then ( (data) => {
-    const imageUrl = data.data.images.original.url;
+).then ( ({data}: GiphyRandomResponse) => {
+    // const imageUrl = data.data.images.original.
+    const imageUrl = data.images.original.url;
     console.info (imageUrl);
+    CreateImage(imageUrl);
 
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
 
-    document.body.appendChild(imgElement);
 } 
 )
 .catch( (err) => {
     console.error(err);
     }
 )
+
+const CreateImage = (url: string) => {
+    const imgElement = document.createElement('img');
+    imgElement.src = url;
+
+    document.body.append(imgElement);
+
+}
